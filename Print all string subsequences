@@ -1,0 +1,20 @@
+void subsequences (char *a, char *b , int i ,int j){
+
+if(a[i]=='\0'){
+b[j]='\0'
+cout<<b<<endl;
+return;
+}
+
+//Take the 1st character of the array 
+b[j]=a[i];
+subsequences(a,b,i+1,j+1);
+
+//Leave the first character 
+subsequences(a,b,i+1,j);
+}
+
+
+
+//Jo i pointer hain woh string par chal rha hain
+//Jo j pointer hain woh array jismein hum values daal rhe hain uspar chal rha hain
